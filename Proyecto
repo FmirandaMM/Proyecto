@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Albert Camus — Biografía, obras, audio y video</title>
+  <meta name="description" content="Biografía, obras y legado de Albert Camus: novelista, ensayista y pensador sobre el absurdo y la rebelión (1913–1960)." />
+  <style>
+    :root{
+      --bg:#a81010;
+      --text:#ffffff;
+      --panel-bg: rgba(0,0,0,0.16);
+      --panel-strong: rgba(0,0,0,0.22);
+      --accent:#ffd966;
+      --max-width:1100px;
+      --radius:10px;
+      --gap:20px;
+      --font-sans: "Helvetica Neue", Arial, sans-serif;
+    }
+
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:var(--font-sans);
+      background:var(--bg);
+      color:var(--text);
+      padding:40px 18px;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.5;
+    }
+
+    main{max-width:var(--max-width);margin:0 auto}
+
+    /* ---------- Navegación ---------- */
+    nav.menu{
+      position:sticky;
+      top:0;
+      z-index:10;
+      background:rgba(0,0,0,0.35);
+      backdrop-filter:blur(4px);
+      border-radius:var(--radius);
+      padding:10px 14px;
+      margin-bottom:24px;
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      justify-content:center;
+    }
+    nav.menu a{
+      color:var(--text);
+      text-decoration:none;
+      font-size:0.92rem;
+      padding:6px 10px;
+      border-radius:6px;
+      transition:background .2s ease;
+      white-space:nowrap;
+    }
+    nav.menu a:hover, nav.menu a:focus{background:rgba(255,255,255,0.15)}
+
+    header{
+      text-align:center;
+      margin-bottom:28px;
+    }
+
+    h1{
+      font-size:3.2rem;
+      margin:0 0 10px 0;
+      letter-spacing:1px;
+    }
+
+    h2{font-size:1.6rem;margin:0 0 12px 0;color:var(--accent)}
+    h3{font-size:1.15rem;margin:14px 0 6px 0;color:var(--accent)}
+
+    .hero{
+      display:flex;
+      gap:24px;
+      align-items:center;
+      justify-content:center;
+      flex-wrap:wrap;
+      margin-bottom:22px;
+    }
+
+    .hero figure{
+      margin:0;
+      text-align:center;
+      max-width:360px;
+      width:100%;
+    }
+
+    .hero img{
+      width:100%;
+      height:auto;
+      max-width:360px;
+      border-radius:8px;
+      border:4px solid var(--text);
+      box-shadow:0 8px 20px rgba(0,0,0,0.45);
+      display:block;
+    }
+
+    .hero figcaption{
+      margin-top:10px;
+      font-size:0.95rem;
+      color:var(--text);
+      opacity:0.95;
+    }
+
+    .intro{
+      background:var(--panel-bg);
+      padding:18px;
+      border-radius:var(--radius);
+      margin-bottom:18px;
+      font-size:1.05rem;
+    }
+
+    section{scroll-margin-top:70px}
+
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:var(--gap);
+      margin-bottom:22px;
+    }
+
+    .panel{
+      background:var(--panel-bg);
+      padding:18px;
+      border-radius:var(--radius);
+      font-size:1rem;
+    }
+
+    .panel.strong{background:var(--panel-strong)}
+
+    ul.bullets{padding-left:1.1rem;margin:0}
+    ul.bullets li{margin:8px 0}
+
+    .gallery{margin-top:28px}
+
+    .gallery-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+      gap:16px;
+    }
+
+    .card{
+      background:var(--panel-strong);
+      border:3px solid var(--text);
+      border-radius:8px;
+      overflow:hidden;
+      transition:transform .25s ease, box-shadow .25s ease;
+    }
+
+    .card:hover{transform:translateY(-6px);box-shadow:0 12px 30px rgba(0,0,0,0.6)}
+    .card img{width:100%;height:220px;object-fit:cover;display:block;background:#7a0c0c}
+    .card p{margin:0;padding:10px;text-align:center;background:var(--panel-bg);font-size:0.9rem}
+
+    footer{
+      margin-top:28px;
+      font-size:0.95rem;
+      color:var(--text);
+      opacity:0.95;
+    }
+
+    blockquote{
+      margin:0 0 12px 0;
+      padding:12px 14px;
+      background:rgba(255,255,255,0.04);
+      border-left:4px solid var(--accent);
+      border-radius:6px;
+      font-style:italic;
+    }
+
+    /* ---------- Audio ---------- */
+    .audio-box{
+      display:flex;
+      flex-direction:column;
+      gap:10px;
+    }
+    audio{width:100%;filter:invert(0)}
+    .audio-note{font-size:0.85rem;opacity:0.85}
+
+    /* ---------- Video ---------- */
+    .video-wrap{
+      position:relative;
+      width:100%;
+      padding-top:56.25%; /* 16:9 */
+      border-radius:var(--radius);
+      overflow:hidden;
+      border:3px solid var(--text);
+    }
+    .video-wrap iframe{
+      position:absolute;
+      inset:0;
+      width:100%;
+      height:100%;
+      border:0;
+    }
+
+    /* ---------- Acordeón / menú desplegable ---------- */
+    details.acc{
+      background:var(--panel-strong);
+      border-radius:8px;
+      margin-bottom:10px;
+      overflow:hidden;
+      border:1px solid rgba(255,255,255,0.15);
+    }
+    details.acc summary{
+      cursor:pointer;
+      list-style:none;
+      padding:14px 16px;
+      font-weight:bold;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:10px;
+    }
+    details.acc summary::-webkit-details-marker{display:none}
+    details.acc summary::after{
+      content:"+";
+      font-size:1.3rem;
+      color:var(--accent);
+      transition:transform .2s ease;
+      flex-shrink:0;
+    }
+    details.acc[open] summary::after{transform:rotate(45deg)}
+    details.acc .acc-body{
+      padding:0 16px 16px 16px;
+      font-size:0.98rem;
+    }
+    details.acc code{
+      background:rgba(0,0,0,0.35);
+      padding:2px 6px;
+      border-radius:4px;
+      font-family:Consolas, Monaco, monospace;
+      font-size:0.9em;
+    }
+    details.acc pre{
+      background:rgba(0,0,0,0.35);
+      padding:10px 12px;
+      border-radius:6px;
+      overflow-x:auto;
+      font-family:Consolas, Monaco, monospace;
+      font-size:0.85rem;
+    }
+
+    /* ---------- Sub-galerías dentro del acordeón ---------- */
+    .mini-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+      gap:12px;
+      margin-top:12px;
+    }
+    .mini-card{
+      background:rgba(0,0,0,0.28);
+      border:2px solid rgba(255,255,255,0.5);
+      border-radius:8px;
+      overflow:hidden;
+    }
+    .mini-card img{width:100%;height:140px;object-fit:cover;display:block;background:#5c0b0b}
+    .mini-card p{margin:0;padding:6px 8px;font-size:0.82rem;text-align:center}
+
+    .datos-curiosos{padding-left:1.1rem;margin:0}
+    .datos-curiosos li{margin:8px 0}
+
+    .banda-video-wrap{
+      position:relative;
+      width:100%;
+      padding-top:56.25%;
+      border-radius:8px;
+      overflow:hidden;
+      border:2px solid rgba(255,255,255,0.5);
+      margin-top:10px;
+    }
+    .banda-video-wrap iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+
+    .link-chip{
+      display:inline-block;
+      margin:4px 6px 4px 0;
+      padding:6px 12px;
+      background:rgba(255,255,255,0.12);
+      border:1px solid rgba(255,255,255,0.4);
+      border-radius:20px;
+      color:var(--text);
+      text-decoration:none;
+      font-size:0.85rem;
+    }
+    .link-chip:hover{background:rgba(255,255,255,0.25)}
+
+    /* ---------- Personalizador de fondo ---------- */
+    .theme-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(130px,1fr));
+      gap:12px;
+      margin-top:12px;
+    }
+    .theme-btn{
+      cursor:pointer;
+      border:2px solid rgba(255,255,255,0.6);
+      border-radius:10px;
+      padding:16px 10px;
+      color:#fff;
+      font-weight:bold;
+      font-size:0.85rem;
+      text-align:center;
+      transition:transform .15s ease, box-shadow .15s ease;
+    }
+    .theme-btn:hover{transform:translateY(-3px);box-shadow:0 8px 18px rgba(0,0,0,0.4)}
+    .theme-btn:focus-visible{outline:3px solid var(--accent)}
+    .theme-rojo{background:linear-gradient(135deg,#a81010,#5c0b0b)}
+    .theme-noche{background:linear-gradient(135deg,#0f1023,#1e2148)}
+    .theme-nobel{background:linear-gradient(135deg,#8a6d00,#3b2f00)}
+    .theme-oceano{background:linear-gradient(135deg,#0b3d5c,#052a3d)}
+    .theme-argel{background:linear-gradient(135deg,#c96a1a,#7a3b09)}
+
+    body.bg-anim{
+      background-size:400% 400%;
+      animation:gradienteAnim 16s ease infinite;
+    }
+    @keyframes gradienteAnim{
+      0%{background-position:0% 50%}
+      50%{background-position:100% 50%}
+      100%{background-position:0% 50%}
+    }
+    .anim-toggle{
+      margin-top:14px;
+      display:flex;
+      align-items:center;
+      gap:8px;
+      font-size:0.9rem;
+    }
+
+    /* ---------- Ejercicio 8 ---------- */
+    .quiz{display:flex;flex-direction:column;gap:14px}
+    .quiz-q{background:var(--panel-strong);padding:14px 16px;border-radius:8px}
+    .quiz-q p{margin:0 0 8px 0;font-weight:bold}
+    .quiz-q label{
+      display:block;
+      padding:6px 8px;
+      border-radius:6px;
+      cursor:pointer;
+    }
+    .quiz-q label:hover{background:rgba(255,255,255,0.08)}
+    .quiz-actions{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+    .btn{
+      background:var(--accent);
+      color:#5c2e00;
+      border:none;
+      padding:10px 18px;
+      border-radius:6px;
+      font-weight:bold;
+      cursor:pointer;
+      font-size:0.95rem;
+    }
+    .btn:hover{opacity:0.9}
+    #quiz-result{font-weight:bold}
+
+    /* Responsive */
+    @media (max-width:900px){
+      h1{font-size:2.4rem}
+      .grid{grid-template-columns:1fr}
+      .hero{gap:14px}
+    }
+
+    @media (prefers-reduced-motion:reduce){
+      .card{transition:none}
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <nav class="menu" aria-label="Navegación de la página">
+      <a href="#biografia">Biografía</a>
+      <a href="#pensamiento">Pensamiento</a>
+      <a href="#obras">Obras</a>
+      <a href="#galeria">Galería</a>
+      <a href="#audio">Audio</a>
+      <a href="#video">Video</a>
+      <a href="#guia">Guía HTML/CSS</a>
+      <a href="#ejercicio8">Ejercicio 8</a>
+    </nav>
+
+    <header>
+      <h1>Albert Camus</h1>
+      <p style="margin:6px 0 0 0;opacity:0.95">Novelista, ensayista y pensador sobre el absurdo y la rebelión (1913–1960)</p>
+    </header>
+
+    <section class="hero" aria-labelledby="titulo-principal">
+      <figure>
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Camus2.jpg" alt="Retrato de Albert Camus, premio Nobel de Literatura, 1957" loading="lazy">
+        <figcaption>Albert Camus — Premio Nobel de Literatura, 1957</figcaption>
+      </figure>
+
+      <div style="max-width:560px;">
+        <div class="intro" role="region" aria-label="Resumen introductorio">
+          <strong>Albert Camus</strong> (Mondovi, Argelia francesa; 7 de noviembre de 1913 – Villeblevin, Francia; 4 de enero de 1960) fue un novelista, ensayista, dramaturgo, filósofo y periodista francés. Su obra, marcada por su infancia en Argelia, aborda la <strong>condición humana</strong>, la <strong>experiencia del absurdo</strong>, la <strong>libertad</strong> y la <strong>responsabilidad moral</strong>.
+        </div>
+
+        <blockquote>
+          Albert Camus fue un novelista, ensayista, dramaturgo, filósofo y periodista francés, considerado una de las voces morales más influyentes del siglo XX.
+        </blockquote>
+
+        <blockquote>
+          Su obra, profundamente influenciada por su crianza en el norte de África, explora la condición humana, la libertad y la rebelión frente a la injusticia.
+        </blockquote>
+      </div>
+    </section>
+
+    <section class="grid" aria-label="Biografía y pensamiento">
+      <article class="panel" id="biografia" aria-labelledby="biografia-titulo">
+        <h2 id="biografia-titulo">Contexto biográfico</h2>
+        <p><strong>Nacimiento y formación.</strong> Nació en Argelia en una familia modesta; quedó huérfano de padre durante la Primera Guerra Mundial y fue criado por su madre, quien era sorda y prácticamente analfabeta, en un barrio popular de Argel. Estudió filosofía en la Universidad de Argel bajo la tutela del profesor Jean Grenier. La tuberculosis, diagnosticada cuando era adolescente, marcó su salud y su visión de la vida como algo frágil y valioso.</p>
+        <p><strong>Juventud e inicios literarios.</strong> Trabajó en oficios diversos —desde vendedor hasta actor de teatro aficionado— antes de dedicarse por completo a la escritura. Sus primeros textos aparecieron en la revista <em>Sud</em> en 1932, y en 1938 publicó <em>Nupcias</em>, una colección de meditaciones líricas sobre el paisaje argelino.</p>
+        <p><strong>Resistencia y periodismo.</strong> Durante la Segunda Guerra Mundial trabajó en la Resistencia francesa y fue editor del periódico clandestino <em>Combat</em>, desde donde defendió la libertad y criticó los totalitarismos.</p>
+        <p><strong>Vida personal.</strong> Se casó dos veces: con Simone Hié en 1934 (matrimonio que terminó en divorcio) y con Francine Faure en 1940, con quien tuvo dos hijos gemelos, Catherine y Jean.</p>
+        <p><strong>Reconocimientos.</strong> En 1957 recibió el Premio Nobel de Literatura, convirtiéndose en el segundo laureado más joven en la historia del premio y el primero nacido en África.</p>
+        <p><strong>Muerte.</strong> Falleció el 4 de enero de 1960 en un accidente automovilístico cerca de Villeblevin, Francia, a los 46 años, cuando regresaba a París junto a su editor Michel Gallimard.</p>
+      </article>
+
+      <article class="panel strong" id="pensamiento" aria-labelledby="pensamiento-titulo">
+        <h2 id="pensamiento-titulo">Filosofía y temas principales</h2>
+        <ul class="bullets">
+          <li><strong>El absurdo:</strong> tensión entre la búsqueda humana de sentido y la indiferencia silenciosa del mundo; la respuesta ética no es el suicidio ni la resignación, sino la rebelión y la aceptación lúcida de la existencia.</li>
+          <li><strong>Rebelión y solidaridad:</strong> la revuelta como acto moral individual que, al afirmar los propios límites, afirma también los de los demás («me rebelo, luego existimos»).</li>
+          <li><strong>Ética sin metafísica:</strong> defensa de una ética basada en la dignidad humana y la responsabilidad concreta, sin recurrir a un fundamento religioso o trascendente.</li>
+          <li><strong>Distancia del existencialismo:</strong> aunque se le asoció con Jean-Paul Sartre, Camus rechazó la etiqueta de existencialista y defendió una filosofía propia centrada en el absurdo y la medida (la moderación frente al fanatismo).</li>
+          <li><strong>Compromiso político:</strong> pacifista, crítico de la pena de muerte y del totalitarismo tanto de derecha como de izquierda, lo que le distanció de otros intelectuales de su época.</li>
+        </ul>
+      </article>
+    </section>
+
+    <section aria-label="Obras principales" id="obras" style="margin-top:6px">
+      <div class="panel">
+        <h2>Obras clave y breve comentario</h2>
+        <ul class="bullets">
+          <li><strong>El extranjero</strong> (1942) — Novela sobre la alienación y la indiferencia social a través de Meursault, un hombre que reacciona con extraña frialdad ante la muerte de su madre y ante su propio juicio por asesinato. Es la obra fundacional del llamado "ciclo del absurdo".</li>
+          <li><strong>El mito de Sísifo</strong> (1942) — Ensayo filosófico que articula la noción del absurdo a través del mito griego de Sísifo, condenado a empujar eternamente una roca cuesta arriba; Camus concluye que "hay que imaginarse a Sísifo feliz".</li>
+          <li><strong>Calígula</strong> (1944) — Obra de teatro sobre el emperador romano que, tras comprender el absurdo de la existencia, lleva su lógica hasta el nihilismo y la tiranía.</li>
+          <li><strong>La peste</strong> (1947) — Alegoría sobre la solidaridad humana frente a la adversidad, ambientada en la ciudad argelina de Orán durante una epidemia; se lee también como metáfora de la ocupación nazi.</li>
+          <li><strong>El hombre rebelde</strong> (1951) — Ensayo sobre la historia de la rebelión y sus límites éticos, que provocó su distanciamiento de Jean-Paul Sartre y el círculo existencialista parisino.</li>
+          <li><strong>La caída</strong> (1956) — Novela en forma de confesión de un exabogado parisino, considerada una de sus obras más pesimistas e introspectivas.</li>
+          <li><strong>El primer hombre</strong> (póstumo, 1994) — Manuscrito autobiográfico incompleto, encontrado en el lugar del accidente que le costó la vida, que aporta claves esenciales sobre su infancia en Argelia.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="gallery" aria-labelledby="galeria-titulo" id="galeria">
+      <h2 id="galeria-titulo">Galería de fotos</h2>
+      <div class="gallery-grid" role="list">
+        <figure class="card" role="listitem">
+          <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Albert%20Camus.jpg" alt="Retrato de Albert Camus" loading="lazy">
+          <figcaption>Retrato de Albert Camus</figcaption>
+        </figure>
+
+        <figure class="card" role="listitem">
+          <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Camus%20Harcourt%201945.jpg" alt="Albert Camus fotografiado por el estudio Harcourt, 1945" loading="lazy">
+          <figcaption>Camus, estudio Harcourt (1945)</figcaption>
+        </figure>
+
+        <figure class="card" role="listitem">
+          <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Camus3.jpg" alt="Fotografía histórica de Albert Camus" loading="lazy">
+          <figcaption>Fotografía histórica de Camus</figcaption>
+        </figure>
+
+        <figure class="card" role="listitem">
+          <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Albert%20Camus.png" alt="Ilustración / retrato de Albert Camus" loading="lazy">
+          <figcaption>Retrato de Albert Camus</figcaption>
+        </figure>
+      </div>
+      <p class="audio-note" style="margin-top:10px">Imágenes: Wikimedia Commons (licencias de dominio público / Creative Commons). Verifica siempre la licencia de cada archivo antes de reutilizarlo.</p>
+    </section>
+
+    <!-- ============ AUDIO: BIOGRAFÍA ============ -->
+    <section class="panel" id="audio" aria-labelledby="audio-titulo" style="margin-top:26px">
+      <h2 id="audio-titulo">🔊 Audio: biografía de Albert Camus</h2>
+      <div class="audio-box">
+        <p>Escucha primero cómo se pronuncia su nombre en francés, y luego reemplaza el segundo reproductor con tu propia narración o resumen en audio de su biografía.</p>
+
+        <h3>Pronunciación del nombre (francés)</h3>
+        <audio controls preload="none">
+          <source src="https://commons.wikimedia.org/wiki/Special:FilePath/Fr-Albert%20Camus.oga" type="audio/ogg">
+          Tu navegador no soporta la reproducción de audio.
+        </audio>
+
+        <h3>Biografía narrada</h3>
+        <audio controls preload="none">
+          <source src="c:\Users\Fernando Eliseo MM\Downloads\audio.ogg" type="audio/ogg">
+          Tu navegador no soporta la reproducción de audio.
+        </audio>
+        <p class="audio-note">Narración en audio de la biografía de Albert Camus.</p>
+      </div>
+    </section>
+
+    <!-- ============ VIDEO: INSTITUTO ============ -->
+    <section class="panel strong" id="video" aria-labelledby="video-titulo" style="margin-top:22px">
+      <h2 id="video-titulo">🎬 Video: historia del Instituto Nacional Albert Camus</h2>
+      <p>El <strong>Instituto Nacional "Albert Camus"</strong>, ubicado en Calle San Antonio Abad N.º 1467, San Salvador, es un centro educativo público de educación básica y media fundado en 1979 y bautizado en honor al escritor y filósofo francés. A continuación, un video institucional sobre su historia y actividades:</p>
+      <div class="video-wrap" style="padding-top:0;position:static">
+        <video controls preload="metadata" style="width:100%;height:auto;display:block;border-radius:8px" poster="">
+          <source src="c:\Users\Fernando Eliseo MM\Downloads\PE.mp4" type="video/mp4">
+          Tu navegador no soporta la reproducción de video.
+        </video>
+      </div>
+    </section>
+
+    <!-- ============ ACORDEÓN: 3 SECCIONES ============ -->
+    <section id="guia" aria-labelledby="guia-titulo" style="margin-top:26px">
+      <h2 id="guia-titulo">📂 Menú desplegable</h2>
+      <p style="margin-bottom:14px">Haz clic en cada tema para desplegarlo.</p>
+
+      <!-- 1. Datos curiosos de Camus -->
+      <details class="acc" open>
+        <summary>1. Albert Camus — Datos curiosos</summary>
+        <div class="acc-body">
+          <ul class="datos-curiosos">
+            <li>⚽ Fue <strong>portero de fútbol</strong> en el equipo juvenil del Racing Universitaire d'Alger, hasta que la tuberculosis se lo impidió. Años después escribió: "Todo lo que sé con más certeza sobre la moral y las obligaciones de los hombres se lo debo al fútbol".</li>
+            <li>🏆 A los 44 años fue el <strong>segundo escritor más joven</strong> en recibir el Nobel de Literatura, y el primero nacido en África.</li>
+            <li>🎭 Antes de ser escritor de tiempo completo, trabajó como <strong>actor de teatro aficionado</strong>, vendedor y meteorólogo, entre otros oficios.</li>
+            <li>🚗 En su bolsillo, al morir en el accidente de 1960, se encontró un <strong>boleto de tren sin usar</strong>: había decidido viajar en auto con su editor en el último momento.</li>
+            <li>🤝 Fue amigo cercano de Jean-Paul Sartre, pero rompieron públicamente su relación en 1952 por diferencias sobre el comunismo soviético.</li>
+            <li>📖 Nunca aceptó que lo llamaran "existencialista"; prefería que se hablara de su filosofía del <strong>absurdo</strong>.</li>
+          </ul>
+
+          <div class="mini-grid">
+            <figure class="mini-card">
+              <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Camus2.jpg" alt="Albert Camus, retrato" loading="lazy">
+              <p>Camus, retrato oficial</p>
+            </figure>
+            <figure class="mini-card">
+              <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Camus%20Harcourt%201945.jpg" alt="Albert Camus, estudio Harcourt 1945" loading="lazy">
+              <p>Estudio Harcourt, 1945</p>
+            </figure>
+            <figure class="mini-card">
+              <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Albert%20Camus.jpg" alt="Retrato de Albert Camus" loading="lazy">
+              <p>Retrato de Camus</p>
+            </figure>
+          </div>
+        </div>
+      </details>
+
+      <!-- 2. Instituto Albert Camus - banda -->
+      <details class="acc">
+        <summary>2. Instituto Nacional Albert Camus — su banda</summary>
+        <div class="acc-body">
+          <p>La <strong>banda de paz</strong> del Instituto Nacional "Albert Camus" (San Salvador) está formada por alrededor de <strong>60 integrantes</strong> entre percusión, aire y redoblantes, junto a un grupo de cachiporristas y cheerleaders. Ensayan durante horas todo el año para representar al instituto en el desfile patrio del 15 de septiembre y en festivales de bandas de paz.</p>
+
+          <h3>Video de la banda</h3>
+          <div class="banda-video-wrap" style="padding-top:0;position:static">
+            <video controls preload="metadata" style="width:100%;height:auto;display:block;border-radius:8px">
+              <source src="media/instituto-camus-banda.mp4" type="video/mp4">
+              Tu navegador no soporta la reproducción de video.
+            </video>
+          </div>
+
+          <h3>Más contenido de la banda</h3>
+          <p style="font-size:0.9rem">Estos son los enlaces oficiales donde se publican fotos y videos de sus presentaciones (no se pueden incrustar directamente por restricciones de esas plataformas):</p>
+          <a class="link-chip" href="https://www.facebook.com/inacoficial/" target="_blank" rel="noopener">📘 Página oficial en Facebook</a>
+          <a class="link-chip" href="https://www.facebook.com/SecPrensaSV/videos/203a%C3%B1osdeindependencia-la-banda-del-instituto-nacional-albert-camus-es-una-de-la/2755459787948213/" target="_blank" rel="noopener">🎥 Video: banda en el desfile patrio</a>
+          <a class="link-chip" href="https://www.elsalvador.com/h-fotogalerias/h-entretenimiento-fotogalerias/desfiles-patrios-colegios-independencia/997808/2022/" target="_blank" rel="noopener">📸 Fotogalería: ensayos de la banda</a>
+
+          <div class="mini-grid">
+            <figure class="mini-card">
+              <img src="" alt="Foto de la banda de paz del Instituto Albert Camus" loading="lazy">
+              <p>Agrega aquí tu foto de la banda</p>
+            </figure>
+            <figure class="mini-card">
+              <img src="" alt="Foto de cachiporristas del Instituto Albert Camus" loading="lazy">
+              <p>Agrega aquí tu foto de cachiporristas</p>
+            </figure>
+          </div>
+          <p class="audio-note">Nota: las fotos de la fotogalería de El Salvador.com son propiedad de ese medio, así que no se incrustan aquí directamente; usa el enlace de arriba para verlas, o sube tus propias fotos reemplazando el <code>src=""</code> vacío de las tarjetas.</p>
+        </div>
+      </details>
+
+      <!-- 3. Personalizar fondo / interfaz visual -->
+      <details class="acc">
+        <summary>3. Personaliza el fondo de la página</summary>
+        <div class="acc-body">
+          <p>Elige un estilo de fondo para toda la página. Es un ejemplo de cómo cambiar variables CSS con JavaScript para mejorar la interfaz visual.</p>
+          <div class="theme-grid">
+            <div class="theme-btn theme-rojo" tabindex="0" role="button" onclick="cambiarFondo('rojo')">Rojo clásico</div>
+            <div class="theme-btn theme-noche" tabindex="0" role="button" onclick="cambiarFondo('noche')">Azul noche</div>
+            <div class="theme-btn theme-nobel" tabindex="0" role="button" onclick="cambiarFondo('nobel')">Nobel dorado</div>
+            <div class="theme-btn theme-oceano" tabindex="0" role="button" onclick="cambiarFondo('oceano')">Océano</div>
+            <div class="theme-btn theme-argel" tabindex="0" role="button" onclick="cambiarFondo('argel')">Argel (atardecer)</div>
+          </div>
+          <label class="anim-toggle">
+            <input type="checkbox" id="anim-check" onchange="alternarAnimacion(this.checked)">
+            Activar degradado animado
+          </label>
+        </div>
+      </details>
+    </section>
+
+    <!-- ============ EJERCICIO 8 ============ -->
+    <section class="panel strong" id="ejercicio8" aria-labelledby="ejercicio8-titulo" style="margin-top:26px">
+      <h2 id="ejercicio8-titulo">📝 Ejercicio 8: pon a prueba lo aprendido</h2>
+      <p>Responde las siguientes preguntas sobre Albert Camus y luego presiona <strong>"Revisar respuestas"</strong> para ver tu puntaje.</p>
+
+      <form class="quiz" id="quiz-form">
+        <div class="quiz-q">
+          <p>1. ¿En qué año recibió Albert Camus el Premio Nobel de Literatura?</p>
+          <label><input type="radio" name="p1" value="incorrecta"> 1947</label>
+          <label><input type="radio" name="p1" value="correcta"> 1957</label>
+          <label><input type="radio" name="p1" value="incorrecta"> 1960</label>
+        </div>
+
+        <div class="quiz-q">
+          <p>2. ¿Cuál de estas obras es un ensayo filosófico sobre el absurdo?</p>
+          <label><input type="radio" name="p2" value="incorrecta"> La peste</label>
+          <label><input type="radio" name="p2" value="correcta"> El mito de Sísifo</label>
+          <label><input type="radio" name="p2" value="incorrecta"> La caída</label>
+        </div>
+
+        <div class="quiz-q">
+          <p>3. ¿Cómo murió Albert Camus?</p>
+          <label><input type="radio" name="p3" value="incorrecta"> De tuberculosis</label>
+          <label><input type="radio" name="p3" value="incorrecta"> En un naufragio</label>
+          <label><input type="radio" name="p3" value="correcta"> En un accidente automovilístico</label>
+        </div>
+
+        <div class="quiz-q">
+          <p>4. ¿En qué país nació Albert Camus?</p>
+          <label><input type="radio" name="p4" value="correcta"> Argelia francesa</label>
+          <label><input type="radio" name="p4" value="incorrecta"> Francia continental</label>
+          <label><input type="radio" name="p4" value="incorrecta"> Marruecos</label>
+        </div>
+
+        <div class="quiz-actions">
+          <button type="button" class="btn" onclick="revisarQuiz()">Revisar respuestas</button>
+          <span id="quiz-result" aria-live="polite"></span>
+        </div>
+      </form>
+    </section>
+
+    <footer>
+      <div class="panel" style="margin-top:18px">
+        <h2>Legado y lecturas recomendadas</h2>
+        <p>Camus sigue siendo una voz central para quienes buscan una ética de la responsabilidad en un mundo sin certezas trascendentes. Para empezar, se recomienda leer <strong>El extranjero</strong> y <strong>El mito de Sísifo</strong>. Para contexto histórico y biográfico, <em>El primer hombre</em> y las biografías críticas ofrecen claves sobre su formación.</p>
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    const fondos = {
+      rojo:   'linear-gradient(135deg,#a81010,#5c0b0b)',
+      noche:  'linear-gradient(135deg,#0f1023,#1e2148)',
+      nobel:  'linear-gradient(135deg,#8a6d00,#3b2f00)',
+      oceano: 'linear-gradient(135deg,#0b3d5c,#052a3d)',
+      argel:  'linear-gradient(135deg,#c96a1a,#7a3b09)'
+    };
+
+    function cambiarFondo(nombre){
+      document.body.style.background = fondos[nombre] || fondos.rojo;
+    }
+
+    function alternarAnimacion(activo){
+      document.body.classList.toggle('bg-anim', activo);
+    }
+
+    function revisarQuiz(){
+      const form = document.getElementById('quiz-form');
+      const total = 4;
+      let correctas = 0;
+      for (let i = 1; i <= total; i++){
+        const seleccion = form.querySelector('input[name="p' + i + '"]:checked');
+        if (seleccion && seleccion.value === 'correcta') correctas++;
+      }
+      const resultado = document.getElementById('quiz-result');
+      resultado.textContent = 'Puntaje: ' + correctas + ' de ' + total + ' correctas.';
+    }
+  </script>
+</body>
+</html>
